@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Vazirmatn", sans-serif;
+  font-feature-settings: "ss01";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: #f4ede7;
+}
+/* ----style-css---- */
+.container {
+  width: 918px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* ----header---- */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header h1 {
+  color: #010000;
+
+  font-size: clamp(2rem, 2vw, 5rem);
+}
+header p {
+  color: #595451;
+  text-align: justify;
+}
+/* ----image-wrapper---- */
+.images-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 299px);
+  grid-template-rows: repeat(3, 180px);
+  gap: 10px;
+}
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+
+  border-radius: 0 15px 0 0;
+}
+.div2 {
+  grid-area: 3 / 1 / 4 / 2;
+
+  border-radius: 0 0 15px 0;
+}
+.div3 {
+  grid-area: 2 / 3 / 4 / 4;
+
+  border-radius: 0 0 0 15px;
+}
+.div4 {
+  grid-area: 1 / 3 / 2 / 4;
+
+  border-radius: 15px 0 0 0;
+}
+.div5 {
+  grid-area: 1 / 2 / 4 / 3;
+}
+/* ----image-item-wrapper---- */
+.image-item-wrapper {
+  position: relative;
+
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+.information {
+  width: 100%;
+
+  padding: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0e4082;
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.56)
+  );
+  color: #fff;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  cursor: pointer;
+}
+.image-item-wrapper:hover .information {
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.69)
+  );
+}
+.icon {
+  display: flex;
+
+  padding: 7px;
+
+  border-radius: 12px;
+
+  transition: background-color 0.075s ease-out, backdrop-filter 0.075s ease-out;
+}
+.icon:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px) brightness(1) contrast(1) grayscale(0)
+    hue-rotate(0deg) invert(0) opacity(1) saturate(1) sepia(0);
+}
+.information .icon path {
+  fill: #fff;
+}
+/* mobile */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  header h1 {
+    color: #010000;
+
+    font-size: clamp(1.6rem, 2vw, 5rem);
+  }
+  .images-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 180px);
+    gap: 10px;
+  }
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div3 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div5 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
