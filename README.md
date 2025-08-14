@@ -1,6 +1,6 @@
 # Labubu-Grid
 
-Labobo, the popular collectible dolls, were created by Chinese artist Kasing Lung, and each one tells a part of his fantasy world with its own personality.
+Labubu, the popular collectible dolls, were created by Chinese artist Kasing Lung, and each one tells a part of his fantasy world with its own personality.
 
 Some features:
 
